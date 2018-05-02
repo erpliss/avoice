@@ -70,6 +70,12 @@
     AEnglistItem* item = [_listViewModel.iTemList objectAtIndex:indexPath.row];
     cell.EnglishLabel.text = item.english;
     cell.ChineseLabel.text = item.chinese;
+    if(item.chinese.length > 0 && [[item.chinese substringWithRange:NSMakeRange(0, 1)] isEqualToString:@"-"]){
+        cell.backgroundColor = [UIColor yellowColor];
+    }
+    else {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
     return cell;
 }
 

@@ -28,7 +28,7 @@
     }
     else {
         if(switchUserType.on){
-            [ASettingManager shareInstance].userType = @"root";
+            [ASettingManager shareInstance].userType = @"root2";
         }
         else{
             [ASettingManager shareInstance].userType = @"adult";
